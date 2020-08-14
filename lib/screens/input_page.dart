@@ -3,25 +3,27 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator/components/icon_content.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/constants.dart';
+import 'package:bmi_calculator/screens/results_page.dart';
 import 'package:bmi_calculator/components/bottom_button.dart';
 import 'package:bmi_calculator/components/round_icon_button.dart';
-
-class InputPage extends StatefulWidget {
-  @override
-  _InputPageState createState() => _InputPageState();
-}
+import 'package:bmi_calculator/calculator_brain.dart';
 
 enum Gender {
   male,
   female,
 }
 
-class _InputPageState extends State<InputPage> {
+class InputPage extends StatefulWidget {
+  @override
+  _InputPageState createState() => _InputPageState();
+}
 
+class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   int height = 180;
   int weight = 60;
   int age = 20;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -231,3 +233,4 @@ class _InputPageState extends State<InputPage> {
       ),
     );
   }
+}
